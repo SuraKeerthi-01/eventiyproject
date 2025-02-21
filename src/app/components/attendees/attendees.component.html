@@ -1,0 +1,25 @@
+<div class="container">
+    <h3>List of Attendees</h3><br>
+    <table class="table table-bordered text-center" >
+        <thead>
+          <tr>
+            <th >Attendee Id</th>
+            <th >Attendee Name</th>
+            <th >Attendee Email</th>
+            <th >Phone Number</th>
+        
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor="let attendee of attendeeData ">
+             <!-- <tr *ngFor="let attendee of attendeeData let j=i;" [class]="attendee.attendeeIsSuspended?'inactive':'active'"> -->
+              <td>{{attendee[0]}}</td>
+              <td>{{attendee[1]}}</td>
+              <td>{{attendee[2]}}</td>
+              <td>{{attendee[3]}}</td>
+          
+            <!-- <td>{{d[i].attendeeId}}</td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>

@@ -1,0 +1,159 @@
+<!-- 
+ 
+
+<div class="container">
+  <form #addEventForm="ngForm" (ngSubmit)="onSubmit(addEventForm)">
+    <div>
+      <label for="eventTitle">Event Name:</label>
+      <input id="eventTitle" name="eventTitle" [(ngModel)]="event.eventTitle" required>
+      <div *ngIf="addEventForm.form.controls['eventTitle']?.invalid && addEventForm.form.controls['eventTitle']?.touched">
+        Event Name is required.
+      </div>
+    </div>
+
+    <div>
+      <label for="eventStartTime">Event Start Date and Time:</label>
+      <input id="eventStartTime" name="eventStartTime" type="datetime-local" [(ngModel)]="event.eventStartTime" required>
+      <div *ngIf="addEventForm.form.controls['eventStartTime']?.invalid && addEventForm.form.controls['eventStartTime']?.touched">
+        Event Start Date and Time is required.
+      </div>
+    </div>
+
+    <div>
+      <label for="eventEndTime">Event End Date and Time:</label>
+      <input id="eventEndTime" name="eventEndTime" type="datetime-local" [(ngModel)]="event.eventEndTime" required>
+      <div *ngIf="addEventForm.form.controls['eventEndTime']?.invalid && addEventForm.form.controls['eventEndTime']?.touched">
+        Event End Date and Time is required.
+      </div>
+    </div>
+
+    <div>
+      <label for="eventLocation">Event Location:</label>
+      <input id="eventLocation" name="eventLocation" [(ngModel)]="event.eventLocation" required>
+      <div *ngIf="addEventForm.form.controls['eventLocation']?.invalid && addEventForm.form.controls['eventLocation']?.touched">
+        Event Location is required.
+      </div>
+    </div>
+
+    <div>
+      <label for="eventPrice">Event Price:</label>
+      <input id="eventPrice" name="eventPrice" [(ngModel)]="event.eventPrice" required>
+      <div *ngIf="addEventForm.form.controls['eventPrice']?.invalid && addEventForm.form.controls['eventPrice']?.touched">
+        Event Price is required.
+      </div>
+    </div>
+
+    <div>
+      <label for="eventType">Event Type:</label>
+      <input id="eventType" name="eventType" [(ngModel)]="event.eventType" required>
+      <div *ngIf="addEventForm.form.controls['eventType']?.invalid && addEventForm.form.controls['eventType']?.touched">
+        Event Type is required.
+      </div>
+    </div>
+
+    <div>
+      <label for="totalTickets">Total number of Tickets:</label>
+      <input id="totalTickets" name="totalTickets" [(ngModel)]="event.totalTickets" required>
+      <div *ngIf="addEventForm.form.controls['totalTickets']?.invalid && addEventForm.form.controls['totalTickets']?.touched">
+        Total number of Tickets is required.
+      </div>
+    </div>
+
+    <div>
+      <label for="eventDescription">Event Description:</label>
+      <textarea id="eventDescription" name="eventDescription" [(ngModel)]="event.eventDescription" required></textarea><br><br>
+      <div *ngIf="addEventForm.form.controls['eventDescription']?.invalid && addEventForm.form.controls['eventDescription']?.touched">
+        Event Description is required.
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit" [disabled]="addEventForm.form.invalid">Submit</button>
+  </form>
+</div>-->
+
+<div class="container">
+    <form #addEventForm="ngForm" (ngSubmit)="onSubmit(addEventForm)">
+      <div>
+        <label for="eventId">Event Name:</label>
+        <input id="eventId" name="eventId" [(ngModel)]="event.eventId" required>
+        <div *ngIf="addEventForm.form.controls['eventId']?.invalid && addEventForm.form.controls['eventId']?.touched">
+          Event Name is required.
+        </div>
+      </div>
+      <div>
+        <label for="eventTitle">Event Name:</label>
+        <input id="eventTitle" name="eventTitle" [(ngModel)]="event.eventTitle" required>
+        <div *ngIf="addEventForm.form.controls['eventTitle']?.invalid && addEventForm.form.controls['eventTitle']?.touched">
+          Event Name is required.
+        </div>
+      </div>
+  
+      <!-- <div>
+        <label for="eventStartTime">Event Start Date and Time:</label>
+        <input id="eventStartTime" name="eventStartTime" type="datetime-local" [(ngModel)]="event.eventStartTime" required>
+        <div *ngIf="addEventForm.form.controls['eventStartTime']?.invalid && addEventForm.form.controls['eventStartTime']?.touched">
+          Event Start Date and Time is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="eventEndTime">Event End Date and Time:</label>
+        <input id="eventEndTime" name="eventEndTime" type="datetime-local" [(ngModel)]="event.eventEndTime" required>
+        <div *ngIf="addEventForm.form.controls['eventEndTime']?.invalid && addEventForm.form.controls['eventEndTime']?.touched">
+          Event End Date and Time is required.
+        </div>
+      </div> -->
+  
+      <div>
+        <label for="eventLocation">Event Location:</label>
+        <input id="eventLocation" name="eventLocation" [(ngModel)]="event.eventLocation" required>
+        <div *ngIf="addEventForm.form.controls['eventLocation']?.invalid && addEventForm.form.controls['eventLocation']?.touched">
+          Event Location is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="eventPrice">Event Price:</label>
+        <input id="eventPrice" name="eventPrice" [(ngModel)]="event.eventPrice" required>
+        <div *ngIf="addEventForm.form.controls['eventPrice']?.invalid && addEventForm.form.controls['eventPrice']?.touched">
+          Event Price is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="eventType">Event Type:</label>
+        <input id="eventType" name="eventType" [(ngModel)]="event.eventType" required>
+        <div *ngIf="addEventForm.form.controls['eventType']?.invalid && addEventForm.form.controls['eventType']?.touched">
+          Event Type is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="totalTickets">Total number of Tickets:</label>
+        <input id="totalTickets" name="totalTickets" [(ngModel)]="event.totalTickets" required>
+        <div *ngIf="addEventForm.form.controls['totalTickets']?.invalid && addEventForm.form.controls['totalTickets']?.touched">
+          Total number of Tickets is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="eventDescription">Event Description:</label>
+        <textarea id="eventDescription" name="eventDescription" [(ngModel)]="event.eventDescription" required></textarea><br><br>
+        <div *ngIf="addEventForm.form.controls['eventDescription']?.invalid && addEventForm.form.controls['eventDescription']?.touched">
+          Event Description is required.
+        </div>
+      </div>
+
+      <div>
+        <label for="totalReceivedAmount">Event TotalReceivedAmount:</label>
+        <textarea id="totalReceivedAmount" name="totalReceivedAmount" [(ngModel)]="event.totalReceivedAmount" required></textarea><br><br>
+        <div *ngIf="addEventForm.form.controls['eventDescription']?.invalid && addEventForm.form.controls['eventDescription']?.touched">
+          Event Description is required.
+        </div>
+      </div>
+
+
+  
+      <button class="btn btn-primary" type="submit" [disabled]="addEventForm.form.invalid">Submit</button>
+    </form>
+  </div>
