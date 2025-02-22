@@ -1,10 +1,11 @@
 
-<h1> Delete Event</h1>
+
 <div class="">
     <h3>List of Events</h3><br>
     <table class="table table-bordered table-responsive text-center" >
         <thead>
           <tr>
+            <th>Event Id</th>
             <th >Event Title</th>
             <th >Event StartTme</th>
             <th >Event EndTme</th>
@@ -21,6 +22,7 @@
         </thead>
         <tbody >
           <tr *ngFor="let d of eventData">
+            <td>{{d.eventId}}</td>
             <td>{{d.eventTitle}}</td>
             <td>{{d.eventStartTime | date}}</td>
             <td>{{d.eventEndTime | date}}</td>
@@ -32,11 +34,16 @@
             <td>{{d.payToPlatform}}</td>
             <td>{{d.eventDescription}}</td>
             <td>
-                <button class="btn btn-danger" (click)="update(d)">Update</button>
+                <button class="btn btn-danger" (click)="updateEvent(d)">Update</button>
             </td> 
           </tr>
         </tbody>
       </table>
     </div>
 
-    <app-update-event [event]="event"></app-update-event>
+    <app-update-event [selectedEvent]="selectedEvent"></app-update-event>
+
+    
+  
+
+    

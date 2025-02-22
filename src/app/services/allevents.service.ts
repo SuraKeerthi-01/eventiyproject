@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class AlleventsService {
 
   
-  URL="http://localhost:9091/api/admin/events";
+  URL="http://localhost:9091/eventify/admin/events";
   constructor(private http:HttpClient) { }
 
   getEventData():Observable<any[]>{

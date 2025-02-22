@@ -8,6 +8,9 @@ import { EventsComponent } from './components/events/events.component';
 import { UpdateEventComponent } from './components/update-event/update-event.component';
 import { DeleteeventComponent } from './components/deleteevent/deleteevent.component';
 import { UpdateComponent } from './components/update/update.component';
+import { OrganizerdasnboardComponent } from './organizerdasnboard/organizerdasnboard.component';
+import { AlertsComponent } from './components/alerts/alerts.component';
+
 
 const routes: Routes = [
   {
@@ -40,6 +43,13 @@ const routes: Routes = [
   {
     path:'update',
     component:UpdateComponent
+  },
+  {
+    path:'dashboard',
+    component:OrganizerdasnboardComponent
+  },{
+    path:'alerts',
+    component:AlertsComponent
   }
 ];
 

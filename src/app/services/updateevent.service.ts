@@ -7,9 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UpdateeventService {
-  private URL = 'http://localhost:9091/api/organizer';
+  //URL = "http://localhost:9091/eventify/organizer/updateevent";
   constructor(private http:HttpClient) { }
   updateEvent(event:Event):Observable<any>{
-    return this.http.put(this.URL+"/updateevent",event,{responseType:"json"})
+    return this.http.put("http://localhost:9091/eventify/organizer/updateevent",event,{responseType:"json"})
   }
 }

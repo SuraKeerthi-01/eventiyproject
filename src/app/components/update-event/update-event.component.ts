@@ -2,6 +2,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AlleventsService } from 'src/app/services/allevents.service';
 import { Event } from 'src/app/event';
 import { UpdateeventService } from 'src/app/services/updateevent.service';
+import { Router } from '@angular/router';
+import { NotificationService } from 'src/app/services/notification.service';
 @Component({
   selector: 'app-update-event',
   templateUrl: './update-event.component.html',
@@ -12,19 +14,19 @@ export class UpdateEventComponent implements OnInit{
   // event: Event[];
   // message:string;
   // searchtext:string;
-
+  selectEvent;
   @Input()
-  event:Event;
-  @Output()
-  updateEvent=new EventEmitter<Event>();
+  selectedEvent:Event;
+  // @Output()
+  // updateEvent=new EventEmitter<Event>();
 
-  constructor(private alleventsservice:AlleventsService,private updateService:UpdateeventService){
-    this.event=new Event();
-    this.updateEvent.emit(this.event);
+  constructor(private route:Router,private updateService:UpdateeventService,private toastService:NotificationService){
+    
   }
   ngOnInit(): void {
     
-    // this.loadEvents();
+    console.log("selectItem",this.selectedEvent);
+    
   }
 //   searchedevent:Event[]=[];
 //   events:Event[]=[];
@@ -43,10 +45,14 @@ export class UpdateEventComponent implements OnInit{
   // }
 
   update(event):void{
+    console.log(event);
     this.updateService.updateEvent(event).subscribe((data)=>{
-      this.event=data;
-      console.log(this.event);
-    })
+      this.selectedEvent=data;
+      console.log("selectedEvent",this.selectedEvent);
+      
+    });
+    this.toastService.sendMessage("Event was updated. Click here for more Details");
+    //console.log(this.notification);
   }
 
 }

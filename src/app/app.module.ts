@@ -15,6 +15,8 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { UpdateEventComponent } from './components/update-event/update-event.component';
 import { DeleteeventComponent } from './components/deleteevent/deleteevent.component';
 import { UpdateComponent } from './components/update/update.component';
+import { AlertsComponent } from './components/alerts/alerts.component';
+
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { UpdateComponent } from './components/update/update.component';
     PaymentComponent,
     UpdateEventComponent,
     DeleteeventComponent,
-    UpdateComponent
+    UpdateComponent,
+    AlertsComponent,
+  
   ],
   imports: [
     BrowserModule,

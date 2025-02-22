@@ -10,25 +10,25 @@ import { Event } from 'src/app/event';
 })
 export class UpdateComponent {
 
-  event: Event[];
-  message:string;
-  searchtext:string;
+  //event: Event[]=[];
+  //searchtext:string;
   eventData:Event[]=[];
+  selectedEvent:Event;
 
     constructor(private route:Router,private deleteservice:UpdateeventService,private alleventsservice:AlleventsService){
       this.alleventsservice.getEventData().subscribe((response)=>{
         this.eventData=response;
-        console.log(this.eventData[0]);
+        console.log(this.eventData);
       });
     }
 
-    update(event):void{
-      this.route.navigate(['/updateEvents']);
+    updateEvent(event:Event):void{
+      //this.route.navigate(['/updateEvents']);
       // this.events.filter((data)=>data.eventTitle.toLowerCase().includes(this.searchtext.toLowerCase()));
       
-      this.event=event;
+      this.selectedEvent=event;
       
-      console.log(this.event);
+      // console.log(this.event);
         // console.log(this.searchedevent);
     }
    

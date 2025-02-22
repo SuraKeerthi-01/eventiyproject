@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlleventsService } from 'src/app/services/allevents.service';
 import { Event } from 'src/app/event';
+import { ServiceService } from 'src/app/service.service';
 
 @Component({
   selector: 'app-events',
@@ -10,14 +11,14 @@ import { Event } from 'src/app/event';
 })
 export class EventsComponent {
 
-  eventData:Event[]=[];
-  constructor(private route:Router,private service:AlleventsService){
-    this.service.getEventData().subscribe((response)=>{
-      this.eventData=response;
-      console.log(this.eventData);
-    });
+  // eventData:Event[]=[];
+  // constructor(private route:Router,private service:ServiceService){
+  //   this.service.getEvents(organizerId).subscribe((response)=>{
+  //     this.eventData=response;
+  //     console.log(this.eventData);
+  //   });
   
-  }
+  // }
 
 
 }
