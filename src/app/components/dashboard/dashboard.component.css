@@ -1,0 +1,25 @@
+h3{
+    margin-top:20px;
+}
+#card1{
+    cursor: pointer;
+    background-color: rgba(255, 168, 134, 0.938);
+}
+#card2{
+    cursor: pointer;
+    background-color: tan;
+}
+#card3{
+    cursor: pointer;
+    background-color: steelblue;
+}
+#card4{
+    cursor: pointer;
+    background-color:rgba(233, 50, 37, 0.849);
+}
+.card-title{
+    margin-bottom:20px;
+}
+.card-text{
+    margin: 5px;
+}

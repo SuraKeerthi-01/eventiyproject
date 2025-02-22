@@ -1,0 +1,31 @@
+<div class="container">
+    <h3>List of Attendees</h3><br>
+    <table class="table table-bordered text-center" >
+        <thead>
+          <tr>
+            <th >Attendee Id</th>
+            <th >Attendee Name</th>
+            <th >Attendee Email</th>
+            <th >Phone Number</th>
+            <th  colspan="2">Action</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor="let attendee of attendeeData " [class]="attendee.isSuspended?'inactive':'active'">
+             <!-- <tr *ngFor="let attendee of attendeeData let j=i;" [class]="attendee.attendeeIsSuspended?'inactive':'active'"> -->
+              <td>{{attendee[0]}}</td>
+              <td>{{attendee[1]}}</td>
+              <td>{{attendee[2]}}</td>
+              <td>{{attendee[3]}}</td>
+          
+            <!-- <td>{{d[i].attendeeId}}</td> -->
+            <td>
+                <button class="btn btn-success" (click)="activefunction(attendee)" [disabled]="false">Active</button>
+            </td>
+            <td>
+                <button class="btn btn-danger" (click)="suspendfunction(attendee)" [disabled]="attendee.isSuspended" >Suspend</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

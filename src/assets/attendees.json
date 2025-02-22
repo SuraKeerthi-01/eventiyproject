@@ -1,0 +1,26 @@
+[
+    {
+        "attendeeId":1,
+        "attendeeName":"Keerthi",
+        "attendeeEmail":"keerthi@gmail.com",
+        "attendeePhoneNumber":"8963478289"
+    },
+    {
+        "attendeeId":2,
+        "attendeeName":"Radha",
+        "attendeeEmail":"radha@gmail.com",
+        "attendeePhoneNumber":"8246283914"
+    },
+    {
+        "attendeeId":3,
+        "attendeeName":"Praveena",
+        "attendeeEmail":"praveena@gmail.com",
+        "attendeePhoneNumber":"9724873687"
+    },
+    {
+        "attendeeId":4,
+        "attendeeName":"Harika",
+        "attendeeEmail":"harika@gmail.com",
+        "attendeePhoneNumber":"9623452787"
+    }
+]

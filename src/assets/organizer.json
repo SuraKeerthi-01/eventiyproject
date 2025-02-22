@@ -1,0 +1,26 @@
+[
+    {
+        "organizerId":1,
+        "organizerName":"Rahul",
+        "organizerEmail":"rahul@123",
+        "organizerPhoneNumber":"9738673989"
+    },
+    {
+        "organizerId":2,
+        "organizerName":"Hema",
+        "organizerEmail":"hema@123",
+        "organizerPhoneNumber":"7346397489"
+    },
+    {
+        "organizerId":3,
+        "organizerName":"Amar",
+        "organizerEmail":"amar@123",
+        "organizerPhoneNumber":"8356834539"
+    },
+    {
+        "organizerId":4,
+        "organizerName":"Lahari",
+        "organizerEmail":"lahari@123",
+        "organizerPhoneNumber":"9653463827"
+    }
+]

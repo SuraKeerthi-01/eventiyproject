@@ -1,0 +1,41 @@
+[
+    {
+        "eventId":1,
+        "eventTitle":"Musical event",
+        "eventDescription":"Musical event",
+        "eventStartTime":"12-07-2025",
+        "eventEndTime":"12-07-2025",
+        "eventLocation":"Pune",
+        "eventCost":50000,
+        "eventType":"Entertainment",
+        "totalTickets":2000,
+        "totalRecivedAmount":10000,
+        "payToPlatform":50000
+    },
+    {
+        "eventId":2,
+        "eventTitle":"Singing event",
+        "eventDescription":"Singing event",
+        "eventStartTime":"26-02-2025",
+        "eventEndTime":"26-02-2025",
+        "eventLocation":"Hyderabad",
+        "eventCost":60000,
+        "eventType":"Entertainment",
+        "totalTickets":5000,
+        "totalRecivedAmount":30000,
+        "payToPlatform":100000
+    },
+    {
+        "eventId":3,
+        "eventTitle":"Standup Comedy",
+        "eventDescription":"Standup Comedy",
+        "eventStartTime":"03-03-2025",
+        "eventEndTime":"03-03-2025",
+        "eventLocation":"Chennai",
+        "eventCost":80000,
+        "eventType":"Comedy",
+        "totalTickets":3000,
+        "totalRecivedAmount":500000,
+        "payToPlatform":90000
+    }
+]
