@@ -8,7 +8,7 @@ import { Attendee } from '../Attendees';
 })
 export class AttendeeserviceService {
   
-  URL="http://localhost:9091/api/admin/getallattendees";
+  URL="http://localhost:9091/eventify/admin/getallattendees";
 
   constructor(private http:HttpClient) { }
   
@@ -16,8 +16,9 @@ export class AttendeeserviceService {
     return this.http.get<any[]>(this.URL);
   }
 
-  getEvnetbyOrganizerId(attendeeId):Observable<any[]>{
-    const eventsURL=`http://localhost:9091/api/admin/eventsByAttendeeId/${attendeeId}`;
+  getEvnetbyAttendeeId(attendeeId):Observable<any[]>{
+    const eventsURL=`http://localhost:9091/eventify/admin/eventsByAttendeeId/${attendeeId}`;
     return this.http.get<any[]>(eventsURL);
+    console.log("attendeeId: ",attendeeId);
   }
 }

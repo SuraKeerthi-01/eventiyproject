@@ -16,6 +16,8 @@ export class OrganizerComponent {
   notificationCount:number=0;
   notificationMsg: string[]=[];
   shownotificationMessages=false;
+  searchQuery:string="";
+  filteredData:Organizer[];
 
     // isSuspended:boolean=false;
   constructor(private service:OrganizerServiceService,private notification:NotificationserviceService){
@@ -61,7 +63,7 @@ export class OrganizerComponent {
     this.service.getEvnetbyOrganizerId(o[0]).subscribe(response=>{
       this.events=response[0]
 
-      console.log(this.events.eventDescription      )
+      console.log("Events",this.events.eventDescription)
       // console.log(response[0].eventDescription)
       // this.events=response;
       // console.log(this.events[0].eventDescription);
@@ -69,5 +71,17 @@ export class OrganizerComponent {
   }
 
   
+  filterfunction(): void {
+    if (this.searchQuery.trim() === '') {
+      this.filteredData = this.data; // No search query, show no data initially
+    } else {
+      this.filteredData = this.data.filter(data =>
+        
+        data[2].toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        data[1].toLowerCase().includes(this.searchQuery.toLowerCase())
+        //console.log("data",data.organizerEmail)
+      );
+    }
+  }
 
 }

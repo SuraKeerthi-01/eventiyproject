@@ -8,7 +8,7 @@ import { Organizer } from '../Organizer';
 })
 export class OrganizerServiceService {
 
-  URL="http://localhost:9091/api/admin/getallorganizers";
+  URL="http://localhost:9091/eventify/admin/getallorganizers";
   
   constructor(private http:HttpClient) { }
 
@@ -17,14 +17,14 @@ export class OrganizerServiceService {
     }
 
     updateOrganizerStatus(organizerId,suspend:boolean):Observable<any>{
-    const suspendURL=`http://localhost:9091/api/admin/organizer/${organizerId}/suspend?suspend=${suspend}`;
+    const suspendURL=`http://localhost:9091/eventify/admin/organizer/${organizerId}/suspend?suspend=${suspend}`;
       return this.http.post(suspendURL,organizerId);
     }
 
     
     
     getEvnetbyOrganizerId(organizerId):Observable<any[]>{
-      const eventsURL=`http://localhost:9091/api/admin/eventsByOrganizerId/${organizerId}`;
+      const eventsURL=`http://localhost:9091/eventify/admin/eventsByOrganizerId/${organizerId}`;
       return this.http.get<any[]>(eventsURL);
     }
 }

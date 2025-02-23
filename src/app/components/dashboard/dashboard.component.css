@@ -18,8 +18,18 @@ h3{
     background-color:rgba(233, 50, 37, 0.849);
 }
 .card-title{
+    margin-top:5px;
     margin-bottom:20px;
+    display: flex;
+    align-items: center; /* Centers the content vertically */
+    justify-content: space-between;
 }
 .card-text{
     margin: 5px;
+}
+.card img{
+    height:30%;
+    width:20%;
+    text-align: end;
+    object-fit: cover; 
 }
